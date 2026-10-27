@@ -139,7 +139,6 @@ if (hero) {
     clearTimeout(changeTimer);
     frames.forEach((frame, i) => frame.classList.toggle('is-active', i === index));
     dots.forEach((dot, i) => dot.setAttribute('aria-pressed', String(i === index)));
-    hero.querySelector('#hero-film-name').textContent = clips[index].title;
     // Fade through the matching still instead of exposing a loading iframe.
     changeTimer = setTimeout(loadClip, 800);
   }

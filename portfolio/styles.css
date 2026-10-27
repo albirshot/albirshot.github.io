@@ -14,3 +14,14 @@
 @media(max-width:370px){.wrap{width:calc(100% - 24px)}.pill{font-size:8px;padding-inline:7px}.theme-toggle{padding-right:3px}.page-nav,.header-actions{gap:3px}.aperture-icon{width:20px;height:20px}.contact-list a{grid-template-columns:1fr;gap:10px}}
 @media(hover:none){.preview-bottom,.play-control,.project-preview::after{opacity:1}.preview-bottom{transform:none}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Full-width translucent navigation remains visible while the page scrolls. */
+.header-bar{position:sticky;top:0;z-index:100;background:rgba(16,18,19,.64);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid rgba(238,239,235,.08)}
+:root[data-theme=light] .header-bar{background:rgba(250,249,246,.66);border-bottom-color:rgba(32,34,32,.08)}
+.hero-heading{padding:64px 32px}
+.hero>.hero-pause{position:absolute;right:26px;bottom:26px;width:40px;height:40px;margin:0;display:grid;place-items:center;border:1px solid rgba(255,255,255,.6);border-radius:50%;background:rgba(0,0,0,.16);color:#fff}
+.hero>.hero-pause:hover{background:rgba(255,255,255,.16)}
+.work-intro h2{margin-bottom:0}
+@media(max-width:850px){:root{scroll-padding-top:136px}}
+@media(max-width:600px){.hero-heading{padding:64px 12px}.hero>.hero-pause{right:18px;bottom:18px;width:36px;height:36px}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.header-bar{background:rgba(16,18,19,.92)}:root[data-theme=light] .header-bar{background:rgba(250,249,246,.92)}}
