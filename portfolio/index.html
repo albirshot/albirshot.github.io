@@ -7,22 +7,39 @@
   <meta name="description" content="Alexey Biryukov — cinematographer. Selected films and visual stories.">
   <title>Alexey Biryukov — Cinematographer</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261025-about-1">
-  <script src="script.js?v=20261025-about-1" defer></script>
+  <script src="theme.js?v=20261026-redesign-1"></script>
+  <link rel="stylesheet" href="styles.css?v=20261026-redesign-1">
+  <script src="script.js?v=20261026-redesign-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#work">Skip to work</a>
-  <header class="site-header wrap">
-    <span class="header-role">CINEMATOGRAPHER</span>
-    <a class="wordmark" href="#top" aria-label="Alexey Biryukov — home">ALEXEY BIRYUKOV<span class="wordmark-dot">.</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#work" aria-current="location">WORK</a>
-      <a href="contact.html">CONTACT</a>
+    <header class="site-header wrap">
+    <nav class="page-nav" aria-label="Main navigation">
+      <a class="pill" href="about.html">ABOUT</a>
+      <a class="pill" href="#work" aria-current="page">WORK</a>
+    </nav>
+    <a class="wordmark" href="index.html" aria-label="Alexey Biryukov — home">Alexey Biryukov<span>.</span></a>
+    <nav class="social-nav" aria-label="Social links and appearance">
+      <a class="pill" href="https://www.instagram.com/albirshot/" target="_blank" rel="noopener noreferrer">INSTA</a>
+      <a class="pill" href="https://t.me/albirshot" target="_blank" rel="noopener noreferrer">TELEGRAM</a>
+      <a class="pill" href="mailto:albirshot@gmail.com">EMAIL</a>
+      <button class="pill theme-toggle" type="button" aria-label="Включить светлую тему" aria-pressed="false"><span class="theme-label">F/24</span><svg class="aperture-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.2"/><path d="M16 2 24 16 16 30M3.9 9 20 9 28.1 23M3.9 23 12 9 28.1 9M16 30 8 16 16 2M28.1 23 12 23 3.9 9M28.1 9 20 23 3.9 23" stroke="currentColor" stroke-width="1.2"/></svg></button>
     </nav>
   </header>
   <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-visuals" aria-hidden="true">
+        <img class="hero-frame is-active" src="assets/hero-wHbSiN3iFlk.jpg" alt="" width="1280" height="720" fetchpriority="high">
+        <img class="hero-frame" src="assets/hero-M7MMdFPBB64.jpg" alt="" width="1280" height="720" decoding="async">
+        <img class="hero-frame" src="assets/hero-Ytj88xTCDbI.jpg" alt="" width="1280" height="720" decoding="async">
+        <div class="hero-video" inert><div id="hero-player"></div></div>
+      </div>
+      <div class="hero-heading"><p class="eyebrow">LIGHT / MOTION / STORIES</p><h1 id="hero-title"><span>Alexey Biryukov</span><span>Cinematographer</span></h1><a class="hero-work-link" href="#work">EXPLORE WORK <span aria-hidden="true">↘</span></a></div>
+      <div class="hero-bottom"><p class="hero-caption"><span>SELECTED MOMENTS</span><span id="hero-film-name" lang="ru">ЕТП Балерина</span></p><div class="hero-controls"><div class="hero-dots" role="group" aria-label="Выбрать кадры"><button type="button" data-slide="0" aria-label="Кадры из балета" aria-pressed="true">01</button><button type="button" data-slide="1" aria-label="Кадры из театра" aria-pressed="false">02</button><button type="button" data-slide="2" aria-label="Кадры с фестиваля" aria-pressed="false">03</button></div><button class="hero-pause" type="button" aria-label="Приостановить видеофон" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button></div></div>
+    </section>
+    <section class="work-intro wrap" lang="ru"><p class="eyebrow">ALEXEY BIRYUKOV / SELECTED FILMS</p><h2>Люди, места<br>и <em>движение.</em></h2><p>Съёмка и монтаж. Городские события, театр,<br class="desktop-break"> спорт и истории о людях.</p><a class="text-link" href="about.html">ОБО МНЕ ↗</a></section>
     <section class="work wrap" id="work" aria-labelledby="work-title">
-      <h1 class="visually-hidden" id="work-title">Alexey Biryukov — Work</h1>
+      <div class="section-heading"><h2 id="work-title">Work</h2><span>22 FILMS / SELECTED WORK</span></div>
       <div class="project-grid">
         <article class="project">
           <a class="project-preview" href="https://vimeo.com/1233458488" data-provider="vimeo" data-film="1233458488" data-rutube="https://rutube.ru/video/private/aabb6788e8b5fda5b6e5248a0448ae57/?p=H3BEtcC6_yDPWFb8DCey4Q" data-title="Chess and Jazz Moscow" data-year="2026" data-duration="02:17" aria-label="Play Chess and Jazz Moscow">
@@ -181,7 +198,7 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer wrap"><span>© <span id="year">2026</span> ALEXEY BIRYUKOV</span><span>CINEMATOGRAPHY & VISUAL STORIES</span><a href="#top">BACK TO TOP</a></footer>
+    <footer class="site-footer wrap"><span>© <span id="year">2026</span> ALEXEY BIRYUKOV</span><span>CINEMATOGRAPHER & FILM EDITOR</span><a href="#top">BACK TO TOP ↑</a></footer>
   <dialog class="film-dialog" aria-labelledby="film-title">
     <div class="dialog-header"><h2 id="film-title">Новое направление бизнеса на СНГ рынке</h2><button class="close-film" type="button" aria-label="Close film">CLOSE <span aria-hidden="true">×</span></button></div>
     <div class="player-choices" role="group" aria-label="Choose video player" hidden>
