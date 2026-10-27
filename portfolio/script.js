@@ -184,6 +184,7 @@ if (hero) {
     requested = true;
     window.onYouTubeIframeAPIReady = () => {
       player = new YT.Player('hero-player', {
+        host: 'https://www.youtube-nocookie.com',
         videoId: clips[index].id,
         playerVars: { autoplay: 1, mute: 1, controls: 0, cc_load_policy: 0, disablekb: 1, fs: 0, playsinline: 1, rel: 0, start: clips[index].start, end: clips[index].start + 13, origin: location.origin },
         events: {
@@ -197,10 +198,11 @@ if (hero) {
             if (running()) loadClip(); else player.pauseVideo();
           },
           onApiChange: () => {
-            if (player.getOptions?.().includes('captions')) player.unloadModule?.('captions');
+            if (player.getOptions?.().includes('captions')) player.setOption('captions', 'track', {});
           },
           onStateChange: (event) => {
             if (event.data === 1) {
+              if (player.getOptions?.().includes('captions')) player.setOption('captions', 'track', {});
               if (running()) hero.classList.add('is-video-playing'); else player.pauseVideo();
             } else if (event.data === 0 && running()) {
               chooseClip((index + 1) % clips.length);
